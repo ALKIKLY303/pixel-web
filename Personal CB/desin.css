@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@font-face {
+  font-family: 'PixelAE';
+  src: url('fonts/PixelAE-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'PixelAE', cursive;
+  direction: rtl;
+  background-color: #F5ECE0;
+}
+
+/* الشريط العلوي */
+.navbar_CS {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #693382;
+  border-bottom: 4px solid #000;
+  z-index: 1000;
+  padding: 10px 0;
+  box-shadow: 0 4px 0 #000;
+}
+
+.navbar_CS ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar_CS li {
+  flex: 1;
+  text-align: center;
+}
+
+.navbar_CS a {
+  text-decoration: none;
+  background-color: #f8e36a;
+  color: #000;
+  padding: 12px 0;
+  border: 3px solid #000;
+  font-size: 36px;
+  display: block;
+  box-shadow: 2px 2px 0 #000;
+  transition: 0.2s ease;
+}
+
+.navbar_CS a:hover {
+  background-color: #fff176;
+  transform: translateY(2px);
+  box-shadow: none;
+}
+
+/* الصفحة الرئيسية */
+.section {
+  min-height: 100vh;
+  padding: 140px 20px 100px;
+  background-color: #5F99AE;
+  box-sizing: border-box;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.section.alt {
+  background-color: #d6e6f2;
+}
+
+.section h1,
+.section h2 {
+  margin-bottom: 20px;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.section li,
+.section p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* الصفحة الرئيسية - المحتوى والصورة */
+.home-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  text-align: right;
+}
+
+.home-text {
+  max-width: 600px;
+}
+
+.home-text h1 {
+  font-size: 51px;
+  margin-bottom: 20px;
+}
+
+.home-text p {
+  font-size: 41px;
+  
+}
+
+.Me p{
+  gap: 40px;
+  font-size: 24px;
+}
+.home-image img {
+  width: 180px;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+/* الأيقونات الاجتماعية */
+.social-icons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a img {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #000;
+  padding: 4px;
+  background-color: #f8e36a;
+  box-shadow: 2px 2px 0 #000;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);
+  box-shadow: none;
+}
+
+#skills h2{
+  font-size: 48px;
+}
+#skills li {
+  font-size: 38px; /* حجم كبير للـ li */
+  
+}
+
+#skills p {
+  font-size: 24px; /* حجم صغير للـ p */
+  margin-bottom: 15px;
+}
+#experience h2{
+font-size: 48px
+}
+#experience li{
+  font-size: 38px;
+}
+#experience p{
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.cyber{
+  gap: 20px;
+}
+#certificates h2{
+font-size: 48px;
+}
+#certificates li {
+  font-size: 24px;
+}
+#certificates img{
+  border: 8px solid #f8e36a; /* إطار بلون أخضر */
+  border-radius: 20px;       /* زوايا دائرية */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* ظل جميل */
+  max-width: 100%;           /* تناسب مع العرض */
+  transition: transform 0.3s ease;
+}
+.cyber {
+  margin-bottom: 20px;
+}
+.c {
+  margin-bottom: 20px;
+}
+/* تحريك الأقسام */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* تأخير التحريك */
+.section:nth-of-type(1) { animation-delay: 0.2s; }
+.section:nth-of-type(2) { animation-delay: 0.4s; }
+.section:nth-of-type(3) { animation-delay: 0.6s; }
+.section:nth-of-type(4) { animation-delay: 0.8s; }
